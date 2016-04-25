@@ -1,9 +1,10 @@
-bair.controller('ListCtrl',  function($scope, $state, $stateParams, serverService){
+bair.controller('ListCtrl',  function($scope, $state, $stateParams, serverService, usSpinnerService){
 	console.log('ListCtrl');
 	console.log('params: ' + $stateParams.type);
 	$scope.posts = [];
 	init();
 	function init(){
+		usSpinnerService.spin('spinner-1');
 		if($stateParams.type){
 			serverService.getByType().then(function(res){
 				console.log(res);
@@ -16,5 +17,8 @@ bair.controller('ListCtrl',  function($scope, $state, $stateParams, serverServic
 		}else{
 			alert("Та хайж буй зарынхаа төрлийг сонгоно уу.");
 		}
+	}
+	$scope.showDetail = function(){
+		
 	}
 });

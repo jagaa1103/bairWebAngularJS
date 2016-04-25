@@ -1,4 +1,4 @@
-var bair = angular.module('bair', ['ui.router', 'ui.bootstrap', 'naif.base64']);
+var bair = angular.module('bair', ['ui.router', 'ngAnimate','ui.bootstrap', 'naif.base64', 'angularSpinner']);
 
 bair.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise('/main');
@@ -19,4 +19,8 @@ bair.config(function($stateProvider, $urlRouterProvider){
 			controller: "insertPostCtrl"
 		});
 });
+
+bair.config(['usSpinnerConfigProvider', function (usSpinnerConfigProvider) {
+    usSpinnerConfigProvider.setTheme('smallRed', {color: 'red', radius: 6});
+}]);
 
