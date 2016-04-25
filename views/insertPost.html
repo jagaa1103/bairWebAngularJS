@@ -1,0 +1,125 @@
+<div class="container">
+	<form class="form-horizontal" style="margin-top: 50px;">
+	  <fieldset>
+	    <legend>Шинэ Зар</legend>
+	    <div class="form-group">
+	      <label class="col-md-2 control-label">Зарын төрлөө сонгоно уу</label>
+	      <div class="col-md-10">
+	        <div class="radio">
+	          <label>
+	            <input type="radio" name="optionsRadios" id="optionsRadios1" value="sell" checked="" ng-model="post.type">
+	            Зарна
+	          </label>
+	        </div>
+	        <div class="radio">
+	          <label>
+	            <input type="radio" name="optionsRadios" id="optionsRadios2" value="rent" ng-model="post.type">
+	            Түрээслүүлнэ
+	          </label>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="select" class="col-md-2 control-label">Хот</label>
+	      <div class="col-md-4">
+	        <select class="form-control" id="select" ng-model="post.city">
+	          <option>Улаанбаатар</option>
+	          <option>Дархан</option>
+	          <option>Эрдэнэт</option>
+	          <option>Дорнод</option>
+	          <option>Сэлэнгэ</option>
+	          <option>Мөрөн</option>
+	        </select>
+	      </div>
+	      <label for="select" class="col-md-2 control-label">Дүүрэг</label>
+	      <div class="col-md-4">
+	        <select class="form-control" id="select" ng-model="post.district">
+	          <option>Баянзүрх</option>
+	          <option>Багахангай</option>
+	          <option>Багануур</option>
+	          <option>Хан-Уул</option>
+	          <option>Сүхбаатар</option>
+	          <option>Сонгино Хайрхан</option>
+	        </select>
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="inputPrice" class="col-md-2 control-label">Үнэ</label>
+	      <div class="col-md-4">
+	        <input type="text" class="form-control" id="inputPrice" placeholder="Үнээ оруулна уу" ng-model="post.price">
+	      </div>
+	      <label for="inputPrice" class="col-md-2 control-label">Өрөө</label>
+	      <div class="col-md-4">
+	        <select class="form-control" id="select" ng-model="post.room">
+	          <option>1</option>
+	          <option>2</option>
+	          <option>3</option>
+	          <option>4</option>
+	        </select>
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="select" class="col-md-2 control-label">Барилгын давхар</label>
+	      <div class="col-md-4">
+	        <select class="form-control" id="select" ng-model="post.total_floor">
+	          <option>1</option>
+	          <option>2</option>
+	          <option>3</option>
+	          <option>4</option>
+	          <option>5</option>
+	          <option>6</option>
+	          <option>7</option>
+	          <option>8</option>
+	          <option>9</option>
+	          <option>10</option>
+	        </select>
+	      </div>
+	      <label for="select" class="col-md-2 control-label">Давхар</label>
+	      <div class="col-md-4">
+	        <select class="form-control" id="select" ng-model="post.flat_floor">
+	          <option>1</option>
+	          <option>2</option>
+	          <option>3</option>
+	          <option>4</option>
+	          <option>5</option>
+	        </select>
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label for="select" class="col-md-2 control-label">Ашиглалтанд орсон он</label>
+	      <div class="col-md-4">
+	        <select class="form-control" id="select" ng-model="post.es_date">
+	          <option>2000 оноос өмнө</option>
+	          <option>2001</option>
+	          <option>2002</option>
+	          <option>2003</option>
+	          <option>2010</option>
+	        </select>
+	      </div>
+	      <label for="select" class="col-md-2 control-label">Гараж</label>
+	      <div class="col-md-4">
+	        <select class="form-control" id="select" ng-model="post.garage">
+	          <option>байгаа</option>
+	          <option>байхгүй</option>
+	        </select>
+	      </div>
+	    </div>
+	    <div class="form-group">
+			<label for="exampleInputFile" class="col-md-2 control-label">Зургаа оруулна уу</label>
+			<input class="col-md-4" type="file" ng-model="post.images" multiple base-sixty-four-input>
+		</div>
+	    <div class="form-group">
+	      <label for="textArea" class="col-md-2 control-label">Нэмэлт мэдээлэл</label>
+	      <div class="col-md-10">
+	        <textarea class="form-control" rows="3" id="textArea" ng-model="post.extra_info"></textarea>
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <div class="col-md-10 col-md-offset-2">
+	        <button type="reset" class="btn btn-default" ng-click="back_clicked()">Буцах</button>
+	        <button type="submit" class="btn btn-primary" ng-click="insert_clicked(post)">Оруулах</button>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
